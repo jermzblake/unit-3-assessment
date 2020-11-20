@@ -18,8 +18,8 @@ def add_task(request):
     # validate the form
     if form.is_valid():
         form.save()
-    return redirect('')
+    return redirect('index')
 
 class TaskDelete(DeleteView):
-    model: Task
-    success_url = ''
+    model = Task
+    success_url = '/'
